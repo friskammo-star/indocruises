@@ -13,7 +13,7 @@ const logos = [...partners, ...partners]
 
 export default function Partners() {
   return (
-    <section className="pt-16 pb-6 bg-white overflow-hidden">
+    <section className="pt-16 pb-0 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-10 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
           Trusted by Industry Leaders
