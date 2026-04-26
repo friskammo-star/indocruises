@@ -13,8 +13,8 @@ const logos = [...partners, ...partners]
 
 export default function Partners() {
   return (
-    <section className="pt-6 pb-0 bg-white overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-3 text-center">
+    <section className="py-16 bg-white overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-10 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
           Trusted by Industry Leaders
         </p>
@@ -30,7 +30,7 @@ export default function Partners() {
             {logos.map((partner, i) => (
               <div
                 key={`logo-${i}`}
-                className="flex-shrink-0 mx-6 relative h-8 w-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                className="flex-shrink-0 mx-6 relative h-12 w-32 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               >
                 <Image
                   src={partner.src}
