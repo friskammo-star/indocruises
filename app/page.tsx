@@ -13,10 +13,10 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
-      <Partners />
       <About />
       <Services />
       <Careers />
+      <Partners />
       <Contact />
       <Footer />
       <WhatsAppButton />
