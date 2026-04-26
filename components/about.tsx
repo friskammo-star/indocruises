@@ -58,7 +58,7 @@ export default function About() {
   const imageY = useTransform(scrollYProgress, [0, 1], [60, -60])
 
   return (
-    <section id="about" ref={sectionRef} className="relative py-32 lg:py-40 bg-pearl overflow-hidden">
+    <section id="about" ref={sectionRef} className="relative py-32 lg:py-40 bg-white overflow-hidden">
       {/* Decorative compass element */}
       <div className="absolute top-20 right-10 w-64 h-64 opacity-[0.03] animate-compass-spin pointer-events-none">
         <svg viewBox="0 0 200 200" className="w-full h-full">

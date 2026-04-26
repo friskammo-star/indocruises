@@ -13,7 +13,7 @@ const logos = [...partners, ...partners]
 
 export default function Partners() {
   return (
-    <section className="py-16 bg-pearl overflow-hidden">
+    <section className="pt-16 pb-6 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-10 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
           Trusted by Industry Leaders
@@ -22,8 +22,8 @@ export default function Partners() {
 
       {/* Marquee */}
       <div className="relative">
-        <div className="absolute top-0 bottom-0 left-0 w-32 z-10 bg-gradient-to-r from-pearl to-transparent pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-32 z-10 bg-gradient-to-l from-pearl to-transparent pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-32 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-32 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 
         <div className="flex overflow-hidden">
           <div className="flex animate-marquee items-center">
