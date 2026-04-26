@@ -144,6 +144,12 @@
 .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
 .animate-compass-spin { animation: compass-spin 30s linear infinite; }
 .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-marquee { animation: marquee 30s linear infinite; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 /* Staggered fade-up for children */
 .stagger-children > * {
