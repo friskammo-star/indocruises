@@ -10,8 +10,8 @@
   --sea-blue: #0C2340;
   --teal: #0891B2;
   --cyan-glow: #22D3EE;
-  --gold: #D4A843;
-  --gold-light: #F0D78C;
+  --gold: #FBBF24;
+  --gold-light: #FDE68A;
   --pearl: #F1F5F9;
   --foam: #E2E8F0;
   --salt: #FFFFFF;
@@ -164,7 +164,7 @@
 
 /* Elegant gold text shimmer */
 .gold-shimmer {
-  background: linear-gradient(90deg, #D4A843 0%, #F0D78C 40%, #D4A843 80%);
+  background: linear-gradient(90deg, #FBBF24 0%, #FDE68A 40%, #FBBF24 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

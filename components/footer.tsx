@@ -13,6 +13,15 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="relative bg-ocean-deep">
+      {/* Wave pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        style={{
+          backgroundImage: "url('/images/wave-pattern.png')",
+          backgroundSize: "500px",
+          backgroundRepeat: "repeat",
+        }}
+      />
       {/* SVG Wave divider */}
       <div className="absolute -top-px left-0 right-0 overflow-hidden text-[var(--pearl)] pointer-events-none z-0">
         <svg
@@ -35,17 +44,19 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-4">
-              <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden">
-                <Image src="/images/logo-transparent.png" alt="Indocruises Logo" fill className="object-contain" />
+            <Link href="/" className="flex items-center gap-0">
+              <div className="relative flex h-[86px] w-[104px] items-center justify-center overflow-hidden">
+                <Image src="/images/logo-baru-transparent.png" alt="Indocruises Logo" fill className="object-contain" />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-semibold tracking-[0.2em] text-white">
-                  INDOCRUISES
-                </span>
-                <span className="text-[9px] tracking-[0.35em] text-gold/80 uppercase">
-                  Maritime Services
-                </span>
+              <div className="flex flex-col w-[180px] mt-0.5 -ml-4">
+                <div className="flex justify-between w-full font-serif text-[22px] font-semibold text-white leading-none">
+                  {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
+                </div>
+                <div className="flex justify-between w-full text-[9px] text-white/70 uppercase font-light mt-[5px]">
+                  {"MARITIME".split("").map((c, i) => <span key={`m-${i}`}>{c}</span>)}
+                  <span className="w-2"></span>
+                  {"SERVICES".split("").map((c, i) => <span key={`s-${i}`}>{c}</span>)}
+                </div>
               </div>
             </Link>
             <p className="text-white/40 text-sm font-light leading-relaxed max-w-xs">
@@ -86,13 +97,13 @@ export default function Footer() {
             <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gold mb-8">Contact</h4>
             <div className="space-y-5 text-sm text-white/40 font-light">
               <p>
-                Benoa Harbor, Marina Complex<br />Bali, Indonesia 80222
+                Jl. Kunti II No.67<br />Seminyak, Kuta, Badung<br />Bali, Indonesia
               </p>
               <p>
-                <a href="mailto:info@indocruises.com" className="hover:text-gold transition-colors">info@indocruises.com</a>
+                <a href="mailto:info@indocruises.co.id" className="hover:text-gold transition-colors">info@indocruises.co.id</a>
               </p>
               <p>
-                <a href="tel:+62361123456" className="hover:text-gold transition-colors">+62 361 123 456</a>
+                Telp/WA: <a href="https://wa.me/628113988988" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">0811-3988-988</a>
               </p>
             </div>
           </div>

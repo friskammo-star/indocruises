@@ -44,7 +44,7 @@ function Counter({ from, to }: { from: number; to: number }) {
 }
 
 const stats = [
-  { value: 15, suffix: "+", label: "Years of Excellence" },
+  { value: 20, suffix: "+", label: "Years of Excellence" },
   { value: 50, suffix: "+", label: "Vessels Managed" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
 ]
@@ -191,19 +191,31 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-24 grid grid-cols-1 md:grid-cols-3 bg-deep-navy text-white overflow-hidden"
+          className="mt-24 relative bg-deep-navy text-white overflow-hidden"
         >
-          {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`flex flex-col items-center py-12 px-8 ${
-                i < stats.length - 1 ? "md:border-r border-b md:border-b-0 border-white/10" : ""
-              }`}
-            >
-              <CountUp target={stat.value} suffix={stat.suffix} />
-              <span className="mt-3 text-[11px] uppercase tracking-[0.25em] text-white/50 font-medium">{stat.label}</span>
-            </div>
-          ))}
+          {/* Wave pattern overlay */}
+          <div
+            className="absolute inset-0 opacity-[0.1] pointer-events-none"
+            style={{
+              backgroundImage: "url('/images/wave-pattern.png')",
+              backgroundSize: "500px",
+              backgroundRepeat: "repeat",
+            }}
+          />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center py-12 px-8 ${
+                  i < stats.length - 1 ? "md:border-r border-b md:border-b-0 border-white/10" : ""
+                }`}
+              >
+                <CountUp target={stat.value} suffix={stat.suffix} />
+                <span className="mt-3 text-[11px] uppercase tracking-[0.25em] text-white/50 font-medium">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
