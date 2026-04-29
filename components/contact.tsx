@@ -55,7 +55,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-deep-navy text-sm mb-1">Head Office</h4>
                   <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                    Benoa Harbor, Marina Complex<br />Bali, Indonesia 80222
+                    Jl. Kunti II No.67<br />Seminyak, Kuta, Badung<br />Bali, Indonesia
                   </p>
                 </div>
               </div>
@@ -66,8 +66,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-deep-navy text-sm mb-1">Email</h4>
-                  <a href="mailto:info@indocruises.com" className="text-teal text-sm hover:text-deep-navy transition-colors">
-                    info@indocruises.com
+                  <a href="mailto:info@indocruises.co.id" className="text-teal text-sm hover:text-deep-navy transition-colors">
+                    info@indocruises.co.id
                   </a>
                 </div>
               </div>
@@ -77,9 +77,9 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-deep-navy/60 group-hover:text-gold transition-colors duration-300" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-deep-navy text-sm mb-1">Phone</h4>
-                  <a href="tel:+62361123456" className="text-teal text-sm hover:text-deep-navy transition-colors">
-                    +62 361 123 456
+                  <h4 className="font-semibold text-deep-navy text-sm mb-1">Telp/WA</h4>
+                  <a href="https://wa.me/628113988988" target="_blank" rel="noopener noreferrer" className="text-teal text-sm hover:text-deep-navy transition-colors">
+                    0811-3988-988
                   </a>
                 </div>
               </div>
