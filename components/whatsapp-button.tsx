@@ -63,7 +63,7 @@ export default function WhatsAppButton() {
               }}
             >
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "628113988988"}`}
+                href="https://wa.me/628113988988"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full h-full"
