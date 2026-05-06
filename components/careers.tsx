@@ -5,9 +5,9 @@ import { Anchor, ChevronRight } from "lucide-react"
 
 const openings = [
   {
-    title: "Port Operations Coordinator",
+    title: "Yacht Captain",
     description:
-      "Manage port clearances, customs documentation, and logistics for incoming vessels.",
+      "Command luxury yachts across Indonesian waters, ensuring safe navigation, crew leadership, and exceptional guest experiences.",
   },
   {
     title: "Hospitality & Service Crew",
