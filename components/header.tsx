@@ -47,17 +47,17 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-20 sm:h-24">
+        <nav className="flex items-center justify-between h-[88px] sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0 group -ml-1 sm:ml-0" aria-label="IndoCruises Home">
-            <div className="relative flex h-[70px] w-[86px] sm:h-[96px] sm:w-[116px] items-center justify-center overflow-hidden">
+            <div className="relative flex h-[84px] w-[103px] sm:h-[96px] sm:w-[116px] items-center justify-center overflow-hidden">
               <Image src="/logo_transparent.png" alt="Indocruises Logo" fill priority className="object-contain transition-transform duration-500 group-hover:scale-110" />
             </div>
-            <div className="flex flex-col w-[150px] sm:w-[200px] ml-0 sm:ml-1">
-              <div className="flex justify-between w-full font-serif text-[20px] sm:text-[26px] font-semibold leading-none text-deep-navy">
+            <div className="flex flex-col w-[180px] sm:w-[200px] ml-0 sm:ml-1">
+              <div className="flex justify-between w-full font-serif text-[24px] sm:text-[26px] font-semibold leading-none text-deep-navy">
                 {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
               </div>
-              <div className="flex justify-between w-full text-[7px] sm:text-[9px] uppercase font-medium mt-[4px] sm:mt-[5px] text-deep-navy/70">
+              <div className="flex justify-between w-full text-[8px] sm:text-[9px] uppercase font-medium mt-[4px] sm:mt-[5px] text-deep-navy/70">
                 {"MARITIME".split("").map((c, i) => <span key={`m-${i}`}>{c}</span>)}
                 <span className="w-1.5 sm:w-2"></span>
                 {"SERVICES".split("").map((c, i) => <span key={`s-${i}`}>{c}</span>)}
@@ -121,7 +121,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden fixed inset-0 top-[80px] sm:top-[96px] z-40 bg-white"
+              className="lg:hidden fixed inset-0 top-[88px] sm:top-[96px] z-40 bg-white"
             >
               <div className="flex flex-col h-full px-6 pt-8 pb-12">
                 {/* Nav links */}
