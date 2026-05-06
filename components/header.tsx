@@ -53,7 +53,7 @@ export default function Header() {
             <div className="relative flex h-[90px] w-[110px] items-center justify-center overflow-hidden">
               <Image src="/logo_transparent.png" alt="Indocruises Logo" fill className="object-contain scale-[1.15] transition-transform duration-500 group-hover:scale-[1.25]" />
             </div>
-            <div className="flex flex-col w-[200px] -ml-6">
+            <div className="flex flex-col w-[200px] ml-1">
               <div className="flex justify-between w-full font-serif text-[26px] font-semibold leading-none text-deep-navy">
                 {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
               </div>
