@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   title: 'Indocruises Maritime Services | Professional Yacht Services in Indonesia',
   description: 'Indocruises Maritime Services - Full-service yacht management support for owners & operators in Indonesia. Expert maintenance, crew management, port clearance and more.',
   icons: {
-    icon: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: '/logo_transparent.png',
+    apple: '/logo_transparent.png',
   },
   openGraph: {
     title: 'Indocruises Maritime Services',

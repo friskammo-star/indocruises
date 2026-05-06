@@ -50,8 +50,8 @@ export default function Header() {
         <nav className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0 group" aria-label="IndoCruises Home">
-            <div className="relative flex h-[90px] w-[110px] items-center justify-center overflow-hidden">
-              <Image src="/logo_transparent.png" alt="Indocruises Logo" fill className="object-contain scale-[1.15] transition-transform duration-500 group-hover:scale-[1.25]" />
+            <div className="relative flex h-[96px] w-[116px] items-center justify-center overflow-hidden">
+              <Image src="/logo_transparent.png" alt="Indocruises Logo" fill priority className="object-contain transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div className="flex flex-col w-[200px] ml-1">
               <div className="flex justify-between w-full font-serif text-[26px] font-semibold leading-none text-deep-navy">
