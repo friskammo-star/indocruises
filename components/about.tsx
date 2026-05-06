@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
-import { Anchor, Shield, Globe } from "lucide-react"
+import { Anchor, Shield, Globe, Eye, Target, CheckCircle2 } from "lucide-react"
 
 function CountUp({ target, suffix = "" }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null)
@@ -47,6 +47,14 @@ const stats = [
   { value: 20, suffix: "+", label: "Years of Excellence" },
   { value: 50, suffix: "+", label: "Vessels Managed" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
+]
+
+const missions = [
+  "Deliver seamless yacht management solutions",
+  "Maximize vessel profitability and asset value",
+  "Maintain the highest safety and compliance standards",
+  "Elevate guest experiences through luxury hospitality",
+  "Support sustainable tourism throughout Indonesia",
 ]
 
 export default function About() {
@@ -95,8 +103,6 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent" />
               </motion.div>
 
-
-
               {/* Gold accent line */}
               <div className="absolute -left-6 top-10 w-px h-32 bg-gradient-to-b from-transparent via-gold to-transparent hidden lg:block" />
             </div>
@@ -141,7 +147,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-lg text-muted-foreground leading-relaxed font-light"
             >
-              Indocruises Maritime Services is Indonesia&apos;s premier provider of full-service yacht and vessel management. With profound understanding of the region&apos;s unique waters and regulations, we cater exclusively to owners and operators of luxury vessels.
+              PT. IMS is a premium Indonesian yacht and liveaboard management company specializing in luxury vessel operations, charter management, marine hospitality, technical support, and commercial yacht services across Indonesia.
             </motion.p>
 
             <motion.p
@@ -151,34 +157,46 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="text-lg text-muted-foreground leading-relaxed font-light"
             >
-              Our seasoned team combines extensive regional knowledge with uncompromising integrity — ensuring your vessel remains in pristine condition, while you enjoy peace of mind wherever you sail.
+              With a focus on world-class service standards, operational excellence, and sustainable marine tourism, PT. IMS supports private owners, investors, and commercial charter operators throughout Komodo, Raja Ampat, Banda Sea, Ambon, and beyond.
             </motion.p>
 
-            {/* Feature highlights */}
+            {/* Vision & Mission */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4"
             >
-              <div className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center bg-teal/10 group-hover:bg-teal transition-colors duration-300">
-                  <Shield className="h-5 w-5 text-teal group-hover:text-white transition-colors duration-300" />
+              {/* Vision */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center bg-teal/10">
+                    <Eye className="h-5 w-5 text-teal" />
+                  </div>
+                  <h4 className="font-serif text-xl text-deep-navy">Our Vision</h4>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-deep-navy text-sm">Trusted & Certified</h4>
-                  <p className="text-sm text-muted-foreground mt-1 font-light">Full regulatory compliance across all Indonesian waters.</p>
-                </div>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                  To become Indonesia&apos;s leading integrated yacht and liveaboard management company delivering world-class marine hospitality and operational excellence.
+                </p>
               </div>
-              <div className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center bg-teal/10 group-hover:bg-teal transition-colors duration-300">
-                  <Globe className="h-5 w-5 text-teal group-hover:text-white transition-colors duration-300" />
+
+              {/* Mission */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center bg-teal/10">
+                    <Target className="h-5 w-5 text-teal" />
+                  </div>
+                  <h4 className="font-serif text-xl text-deep-navy">Our Mission</h4>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-deep-navy text-sm">Regional Expertise</h4>
-                  <p className="text-sm text-muted-foreground mt-1 font-light">Deep knowledge of the archipelago's ports, regulations, and culture.</p>
-                </div>
+                <ul className="space-y-2">
+                  {missions.map((mission, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground font-light leading-relaxed">{mission}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
 

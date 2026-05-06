@@ -3,32 +3,133 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Ship, Settings, ClipboardList, Briefcase, Anchor, ArrowRight } from "lucide-react"
+import {
+  Ship,
+  Settings,
+  ClipboardList,
+  Briefcase,
+  Anchor,
+  ArrowRight,
+  Users,
+  TrendingUp,
+  Star,
+  Shield,
+  Megaphone,
+  CalendarCheck,
+  Wrench,
+  ShieldCheck,
+  Leaf,
+  Eye,
+  Package,
+  Scale,
+  HeartHandshake,
+} from "lucide-react"
 
 const services = [
   {
     icon: Ship,
-    title: "Complete Vessel Management",
-    slug: "complete-vessel-management",
-    description: "End-to-end command of your vessel’s performance, seamlessly integrating scheduling, technical oversight, and operational excellence to ensure flawless execution across the archipelago.",
-  },
-  {
-    icon: ClipboardList,
-    title: "Day-to-Day Operations",
-    slug: "day-to-day-operations",
-    description: "Effortless daily management delivered with precision — from logistics and crew coordination to provisioning and bespoke itinerary planning tailored to every voyage.",
+    title: "Vessel Operations Management",
+    slug: "vessel-operations-management",
+    description:
+      "Comprehensive day-to-day operational support including route planning, cruise scheduling, port coordination, and voyage supervision.",
   },
   {
     icon: Settings,
-    title: "Maintenance & Refit",
-    slug: "maintenance-refit",
-    description: "World-class maintenance and refit solutions executed with meticulous care, partnering with premier regional shipyards to preserve and elevate your vessel’s condition and value.",
+    title: "Technical & Engineering Management",
+    slug: "technical-engineering-management",
+    description:
+      "Preventive maintenance systems, engine servicing, electrical systems management, and engineering supervision for maximum vessel performance.",
+  },
+  {
+    icon: Users,
+    title: "Crew Recruitment & Management",
+    slug: "crew-recruitment-management",
+    description:
+      "Professional recruitment, payroll, crew rotation, training, certification monitoring, and onboard performance management.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Charter & Revenue Management",
+    slug: "charter-revenue-management",
+    description:
+      "International sales representation, OTA integration, broker partnerships, pricing strategies, and revenue optimization programs.",
+  },
+  {
+    icon: Star,
+    title: "Guest Experience & Hospitality",
+    slug: "guest-experience-hospitality",
+    description:
+      "Guest relations, concierge services, premium dining experiences, itinerary personalization, and VIP guest handling.",
   },
   {
     icon: Briefcase,
-    title: "Administrative & Compliance",
-    slug: "administrative-compliance",
-    description: "Discreet, efficient back-office management ensuring full regulatory compliance, smooth port clearances, and transparent financial oversight — wherever you operate in Indonesia.",
+    title: "Financial Management & Reporting",
+    slug: "financial-management-reporting",
+    description:
+      "Transparent financial oversight, budget management, cost optimization, and detailed reporting for complete asset visibility.",
+  },
+  {
+    icon: Scale,
+    title: "Legal & Compliance Management",
+    slug: "legal-compliance-management",
+    description:
+      "Indonesian maritime permits, tourism licensing, insurance coordination, flag compliance, safety audits, and documentation.",
+  },
+  {
+    icon: Shield,
+    title: "Safety & Security Management",
+    slug: "safety-security-management",
+    description:
+      "Comprehensive safety protocols, emergency response planning, security systems, and crew safety training programs.",
+  },
+  {
+    icon: Package,
+    title: "Procurement & Logistics",
+    slug: "procurement-logistics",
+    description:
+      "Strategic sourcing, supply chain management, spare parts procurement, customs handling, and provisioning services.",
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing & Branding",
+    slug: "marketing-branding",
+    description:
+      "Brand strategy, website management, social media campaigns, luxury content creation, and international trade representation.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Reservation & Customer Service",
+    slug: "reservation-customer-service",
+    description:
+      "Booking administration, CRM management, guest communications, and end-to-end reservation lifecycle management.",
+  },
+  {
+    icon: Wrench,
+    title: "Dry Dock & Refit Management",
+    slug: "dry-dock-refit-management",
+    description:
+      "End-to-end dry dock project management, refit coordination, shipyard partnerships, and quality assurance oversight.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Insurance & Risk Management",
+    slug: "insurance-risk-management",
+    description:
+      "Policy management, claims resolution, risk assessment, and comprehensive coverage strategies to safeguard your asset.",
+  },
+  {
+    icon: Leaf,
+    title: "Sustainability & Environmental",
+    slug: "sustainability-environmental",
+    description:
+      "Environmental compliance, sustainable operations programs, waste management, and eco-friendly operational practices.",
+  },
+  {
+    icon: Eye,
+    title: "Owner Representation & Oversight",
+    slug: "owner-representation-oversight",
+    description:
+      "Dedicated owner representation, asset oversight, strategic advisory, and transparent communication on all vessel matters.",
   },
 ]
 
@@ -69,7 +170,7 @@ export default function Services() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -89,8 +190,7 @@ export default function Services() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl text-white leading-tight"
           >
-            Comprehensive Maritime <br />
-            <span className="italic text-gold">Solutions</span>
+            Core <span className="italic text-gold">Services</span>
           </motion.h2>
 
           <motion.p
@@ -100,18 +200,18 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-white/60 leading-relaxed font-light text-lg"
           >
-            Tailored to every level of involvement — from full management of tourism charters to specialized support.
+            PT. IMS provides complete end-to-end yacht and liveaboard management services — from vessel operations and crew management to charter revenue optimization and sustainability programs.
           </motion.p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
               key={service.slug}
               className="h-full"
             >

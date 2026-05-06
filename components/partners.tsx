@@ -36,7 +36,7 @@ export default function Partners() {
 
       {/* Batik pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.08] pointer-events-none"
+        className="absolute inset-0 opacity-[0.15] pointer-events-none"
         style={{
           backgroundImage: "url('/images/batik-pattern.png')",
           backgroundSize: "600px",
