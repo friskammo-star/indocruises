@@ -10,25 +10,25 @@ const services = [
     icon: Ship,
     title: "Complete Vessel Management",
     slug: "complete-vessel-management",
-    description: "Full oversight of operations, from scheduling to performance monitoring across all Indonesian waters.",
+    description: "End-to-end command of your vessel’s performance, seamlessly integrating scheduling, technical oversight, and operational excellence to ensure flawless execution across the archipelago.",
   },
   {
     icon: ClipboardList,
     title: "Day-to-Day Operations",
     slug: "day-to-day-operations",
-    description: "Comprehensive daily coordination including logistics, crew rotations, provisioning, and itinerary planning.",
+    description: "Effortless daily management delivered with precision — from logistics and crew coordination to provisioning and bespoke itinerary planning tailored to every voyage.",
   },
   {
     icon: Settings,
     title: "Maintenance & Refit",
     slug: "maintenance-refit",
-    description: "Expert maintenance programs and professional refit solutions with top-tier regional dockyards.",
+    description: "World-class maintenance and refit solutions executed with meticulous care, partnering with premier regional shipyards to preserve and elevate your vessel’s condition and value.",
   },
   {
     icon: Briefcase,
     title: "Administrative & Compliance",
     slug: "administrative-compliance",
-    description: "Seamless back-office support covering maritime documentation, port clearance, and financial management.",
+    description: "Discreet, efficient back-office management ensuring full regulatory compliance, smooth port clearances, and transparent financial oversight — wherever you operate in Indonesia.",
   },
 ]
 

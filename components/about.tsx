@@ -87,8 +87,8 @@ export default function About() {
                 className="relative h-[500px] lg:h-[600px] w-full overflow-hidden"
               >
                 <Image
-                  src="/images/about-labuan-bajo.png"
-                  alt="Luxury yacht managed by Indocruises in Labuan Bajo"
+                  src="/images/maintenance-refit.jpg"
+                  alt="Luxury yacht managed by Indocruises"
                   fill
                   className="object-cover"
                 />

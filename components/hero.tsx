@@ -93,8 +93,8 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="flex items-center gap-5"
                 >
-                  <span className="h-px w-10 bg-gold" />
-                  <span className="text-gold text-xs font-semibold uppercase tracking-[0.3em]">
+                  <span className="h-px w-10 bg-white" />
+                  <span className="text-white text-xs font-semibold uppercase tracking-[0.3em]">
                     {slides[current].subtitle}
                   </span>
                 </motion.div>
@@ -104,7 +104,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-serif text-5xl sm:text-6xl lg:text-[5.5rem] font-normal text-white leading-[1.05] whitespace-pre-line"
+                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.05] whitespace-pre-line"
                 >
                   {slides[current].title}
                 </motion.h1>
@@ -128,7 +128,7 @@ export default function Hero() {
                 >
                   <a
                     href="#services"
-                    className="group relative inline-flex items-center gap-3 bg-gold px-10 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-deep-navy overflow-hidden transition-shadow duration-500 hover:shadow-[0_0_35px_rgba(212,168,67,0.45)]"
+                    className="group relative inline-flex items-center gap-3 bg-deep-navy px-10 py-4 text-[12px] font-bold uppercase tracking-[0.2em] text-white overflow-hidden transition-shadow duration-500 hover:shadow-[0_0_35px_rgba(6,17,42,0.45)]"
                   >
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Explore Services</span>
                     <span className="absolute inset-0 bg-teal translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
@@ -158,7 +158,7 @@ export default function Hero() {
             <span
               className={`block w-[3px] rounded-full transition-all duration-500 ${
                 index === current
-                  ? "h-10 bg-gold shadow-[0_0_8px_rgba(212,168,67,0.5)]"
+                  ? "h-10 bg-deep-navy shadow-[0_0_8px_rgba(6,17,42,0.5)]"
                   : "h-4 bg-white/30 group-hover:bg-white/60 group-hover:h-6"
               }`}
             />

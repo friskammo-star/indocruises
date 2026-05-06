@@ -44,19 +44,14 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-0">
-              <div className="relative flex h-[86px] w-[104px] items-center justify-center overflow-hidden">
-                <Image src="/images/logo-baru-transparent.png" alt="Indocruises Logo" fill className="object-contain" />
+            <Link href="/" className="flex flex-col gap-0 w-[240px]">
+              <div className="flex justify-between w-full font-serif text-[28px] font-semibold text-white leading-none">
+                {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
               </div>
-              <div className="flex flex-col w-[180px] mt-0.5 -ml-4">
-                <div className="flex justify-between w-full font-serif text-[22px] font-semibold text-white leading-none">
-                  {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
-                </div>
-                <div className="flex justify-between w-full text-[9px] text-white/70 uppercase font-light mt-[5px]">
-                  {"MARITIME".split("").map((c, i) => <span key={`m-${i}`}>{c}</span>)}
-                  <span className="w-2"></span>
-                  {"SERVICES".split("").map((c, i) => <span key={`s-${i}`}>{c}</span>)}
-                </div>
+              <div className="flex justify-between w-full text-[10px] text-white/70 uppercase font-light mt-[5px]">
+                {"MARITIME".split("").map((c, i) => <span key={`m-${i}`}>{c}</span>)}
+                <span className="w-2"></span>
+                {"SERVICES".split("").map((c, i) => <span key={`s-${i}`}>{c}</span>)}
               </div>
             </Link>
             <p className="text-white/40 text-sm font-light leading-relaxed max-w-xs">

@@ -1,34 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Anchor, MapPin, Clock, ChevronRight } from "lucide-react"
+import { Anchor, ChevronRight } from "lucide-react"
 
 const openings = [
   {
-    title: "Marine Engineer",
-    location: "Bali, Indonesia",
-    type: "Full-time",
-    description:
-      "Oversee vessel maintenance and ensure operational excellence across our managed fleet.",
-  },
-  {
-    title: "Yacht Captain",
-    location: "Labuan Bajo, Indonesia",
-    type: "Full-time",
-    description:
-      "Lead navigation and crew management for luxury charter vessels in the Komodo region.",
-  },
-  {
     title: "Port Operations Coordinator",
-    location: "Jakarta, Indonesia",
-    type: "Full-time",
     description:
       "Manage port clearances, customs documentation, and logistics for incoming vessels.",
   },
   {
     title: "Hospitality & Service Crew",
-    location: "Bali, Indonesia",
-    type: "Contract",
     description:
       "Deliver world-class onboard hospitality and guest experience on luxury yachts.",
   },
@@ -117,16 +99,6 @@ export default function Careers() {
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">
                       {job.description}
                     </p>
-                    <div className="flex flex-wrap items-center gap-4 pt-1">
-                      <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <MapPin className="h-3.5 w-3.5 text-teal" />
-                        {job.location}
-                      </span>
-                      <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <Clock className="h-3.5 w-3.5 text-teal" />
-                        {job.type}
-                      </span>
-                    </div>
                   </div>
 
                   <div className="flex-shrink-0 self-center">
