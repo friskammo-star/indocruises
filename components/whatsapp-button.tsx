@@ -25,7 +25,27 @@ export default function WhatsAppButton() {
   }, [handleScroll])
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    const start = window.scrollY
+    const duration = 1200 // ms — slower, elegant scroll
+    let startTime: number | null = null
+
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+
+    const animateScroll = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const eased = easeInOutCubic(progress)
+
+      window.scrollTo(0, start * (1 - eased))
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll)
+      }
+    }
+
+    requestAnimationFrame(animateScroll)
   }
 
   return (
