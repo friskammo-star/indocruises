@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Anchor, MapPin, Navigation } from "lucide-react"
+import { MapPin, Navigation } from "lucide-react"
 
 const destinations = [
   {
@@ -60,7 +60,7 @@ export default function Destinations() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-4 mb-6"
           >
@@ -73,7 +73,7 @@ export default function Destinations() {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="font-serif text-4xl lg:text-5xl xl:text-[3.5rem] text-deep-navy leading-[1.15]"
           >
@@ -109,7 +109,7 @@ export default function Destinations() {
               key={dest.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{
                 duration: 0.6,
                 delay: i * 0.07,

@@ -9,8 +9,20 @@ import Careers from "@/components/careers"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import UnderConstruction from "@/components/under-construction"
+
+// ============================================
+// 🔧 MAINTENANCE MODE TOGGLE
+// Set to true  → show Under Construction page
+// Set to false → show normal website
+// ============================================
+const MAINTENANCE_MODE = true
 
 export default function Home() {
+  if (MAINTENANCE_MODE) {
+    return <UnderConstruction />
+  }
+
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Header />
