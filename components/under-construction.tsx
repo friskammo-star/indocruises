@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Anchor, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function UnderConstruction() {
   const [timeLeft, setTimeLeft] = useState({
@@ -59,17 +59,6 @@ export default function UnderConstruction() {
       </div>
 
       <div className="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center mt-12">
-        {/* Minimalist Icon */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
-        >
-          <div className="w-16 h-16 rounded-full border border-cyan-500/30 flex items-center justify-center bg-cyan-900/10 backdrop-blur-sm">
-            <Anchor className="w-6 h-6 text-cyan-400" />
-          </div>
-        </motion.div>
 
         {/* Title */}
         <motion.h1
