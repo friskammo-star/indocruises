@@ -123,9 +123,9 @@ export default function UnderConstruction() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-300"
         >
-          <a href="mailto:info@indocruises.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+          <a href="mailto:info@indocruises.co.id" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
             <Mail className="w-4 h-4 opacity-70" />
-            <span>info@indocruises.com</span>
+            <span>info@indocruises.co.id</span>
           </a>
           <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-600" />
           <a href="https://wa.me/6281219658407" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
