@@ -16,7 +16,7 @@ import UnderConstruction from "@/components/under-construction"
 // Set to true  → show Under Construction page
 // Set to false → show normal website
 // ============================================
-const MAINTENANCE_MODE = true
+const MAINTENANCE_MODE = false
 
 export default function Home() {
   if (MAINTENANCE_MODE) {
