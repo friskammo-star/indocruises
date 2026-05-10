@@ -23,25 +23,25 @@ const reasons = [
   {
     title: "Deep Indonesian Operational Expertise",
     description:
-      "Unmatched local knowledge of Indonesia's maritime regulations, port systems, and cruising grounds built over decades.",
+      "Extensive local knowledge of Indonesia's maritime regulations, port systems, and cruising grounds built over decades.",
     icon: Map,
   },
   {
-    title: "Luxury Hospitality Standards",
+    title: "Refined Hospitality Standards",
     description:
-      "Five-star service culture embedded across every guest touchpoint — from fine dining to bespoke excursions.",
+      "A disciplined service culture embedded across every guest touchpoint — from refined dining to carefully planned excursions.",
     icon: Star,
   },
   {
-    title: "International Charter Network",
+    title: "International, Multi-Disciplinary Team",
     description:
-      "Global sales reach through established broker relationships, OTA partnerships, and luxury travel networks.",
+      "An international team of captains, engineers, and hospitality specialists supported by a global charter network of brokers, OTAs, and luxury travel partners.",
     icon: Globe,
   },
   {
     title: "Experienced Marine Professionals",
     description:
-      "A team of seasoned captains, engineers, and hospitality experts delivering excellence on every voyage.",
+      "Seasoned captains, engineers, and hospitality leads with deep experience operating across Indonesian waters.",
     icon: Anchor,
   },
   {
@@ -147,7 +147,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-lg text-white/50 leading-relaxed font-light"
           >
-            Trusted by vessel owners for delivering unparalleled maritime management — combining deep Indonesian expertise with international luxury standards.
+            Trusted by vessel owners for dependable maritime management, combining deep Indonesian expertise with international service standards.
           </motion.p>
         </div>
 

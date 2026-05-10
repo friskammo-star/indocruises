@@ -12,7 +12,7 @@ const servicesData: Record<string, any> = {
     title: "Vessel Operations Management",
     headerImage: "/images/hero-1.jpg",
     overview:
-      "Comprehensive day-to-day operational support including route planning, cruise scheduling, port coordination, fuel monitoring, SOP implementation, and voyage supervision to ensure safe and efficient yacht operations.",
+      "Comprehensive day-to-day operational support including route planning, cruise scheduling, port coordination, fuel monitoring, SOP implementation, and voyage supervision to ensure safe, efficient, and dependable vessel operations in Indonesia.",
     features: [
       {
         title: "Route Planning & Cruise Scheduling",
@@ -42,7 +42,7 @@ const servicesData: Record<string, any> = {
     title: "Technical & Engineering Management",
     headerImage: "/images/yacht-1.jpg",
     overview:
-      "Preventive maintenance systems, engine servicing, generator support, electrical systems management, dry dock coordination, spare parts procurement, and engineering supervision designed to maintain maximum vessel performance.",
+      "Preventive maintenance systems, engine servicing, generator support, electrical systems management, dry dock coordination, spare parts procurement, and engineering supervision designed to keep your vessel performing reliably at sea.",
     features: [
       {
         title: "Preventive Maintenance Systems",
@@ -72,7 +72,7 @@ const servicesData: Record<string, any> = {
     title: "Crew Recruitment & Management",
     headerImage: "/images/yacht-2.jpg",
     overview:
-      "Professional recruitment, payroll, crew rotation, training, hospitality standards, certification monitoring, and onboard performance management for captains, engineers, dive teams, chefs, and hospitality staff.",
+      "Professional recruitment, payroll, crew rotation, training, hospitality standards, certification monitoring, and onboard performance management for captains, engineers, dive teams, chefs, and hospitality staff — so owners can rely on a stable, high-performing crew.",
     features: [
       {
         title: "Professional Recruitment",
@@ -102,7 +102,7 @@ const servicesData: Record<string, any> = {
     title: "Charter & Revenue Management",
     headerImage: "/images/hero-1.jpg",
     overview:
-      "International sales representation, OTA integration, broker partnerships, pricing strategies, occupancy forecasting, CRM management, booking administration, and revenue optimization programs.",
+      "International sales representation, OTA integration, broker partnerships, pricing strategies, occupancy forecasting, CRM management, booking administration, and revenue optimization designed to strengthen charter performance.",
     features: [
       {
         title: "International Sales Representation",
@@ -132,15 +132,15 @@ const servicesData: Record<string, any> = {
     title: "Guest Experience & Hospitality Management",
     headerImage: "/images/yacht-2.jpg",
     overview:
-      "Guest relations, concierge services, premium dining experiences, itinerary personalization, onboard events, honeymoon setups, wellness programs, and VIP guest handling.",
+      "Guest relations, concierge services, elevated dining experiences, itinerary personalization, onboard events, honeymoon setups, wellness programs, and VIP guest handling.",
     features: [
       {
         title: "Guest Relations & Concierge",
-        description: "Dedicated guest liaison services delivering personalized attention, anticipating needs, and ensuring every aspect of the onboard experience exceeds expectations."
+        description: "Dedicated guest liaison services delivering personalized attention, anticipating needs, and ensuring every aspect of the onboard experience is managed with care and attention."
       },
       {
-        title: "Premium Dining Experiences",
-        description: "World-class culinary programs featuring bespoke menus, locally sourced ingredients, private dining setups, and accommodating all dietary requirements with exceptional quality."
+        title: "Elevated Dining Experiences",
+        description: "Chef-driven culinary programs featuring bespoke menus, locally sourced ingredients, private dining setups, and accommodating all dietary requirements with exceptional quality."
       },
       {
         title: "Itinerary Personalization",
@@ -170,7 +170,7 @@ const servicesData: Record<string, any> = {
       },
       {
         title: "Cost Optimization Strategies",
-        description: "Proactive identification of cost-saving opportunities across operations, procurement, and crew management without compromising quality or safety."
+        description: "Proactive identification of cost-saving opportunities across operations, procurement, and crew management without compromising safety or guest experience."
       },
       {
         title: "Transparent Monthly Reporting",

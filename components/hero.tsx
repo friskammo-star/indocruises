@@ -9,8 +9,8 @@ const slides = [
   {
     image: "/images/indonesian-cruise.png",
     subtitle: "Welcome to Indocruises",
-    title: "World-Class Vessel\nManagement",
-    description: "Indonesia's market leader in full-service yacht management, delivering uncompromising excellence across the archipelago.",
+    title: "Trusted Vessel Management\nAcross Indonesia",
+    description: "End-to-end yacht and liveaboard management for owners and operators who need reliable support across the Indonesian archipelago.",
   },
   {
     image: "/images/indonesian-cruise-2.png",

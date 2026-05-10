@@ -59,7 +59,7 @@ const services = [
     title: "Guest Experience & Hospitality",
     slug: "guest-experience-hospitality",
     description:
-      "Guest relations, concierge services, premium dining experiences, itinerary personalization, and VIP guest handling.",
+      "Guest relations, concierge services, elevated dining experiences, itinerary personalization, and VIP guest handling.",
   },
   {
     icon: Briefcase,

@@ -50,10 +50,10 @@ const stats = [
 ]
 
 const missions = [
-  "Deliver seamless yacht management solutions",
-  "Maximize vessel profitability and asset value",
-  "Maintain the highest safety and compliance standards",
-  "Elevate guest experiences through luxury hospitality",
+  "Deliver seamless yacht management solutions backed by regional execution",
+  "Maximize vessel profitability and asset value through disciplined operations",
+  "Maintain the highest safety and compliance standards across every voyage",
+  "Elevate guest experiences through refined onboard hospitality and trained crew",
   "Support sustainable tourism throughout Indonesia",
 ]
 
@@ -147,7 +147,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-lg text-muted-foreground leading-relaxed font-light"
             >
-              PT. IMS is a premium Indonesian yacht and liveaboard management company specializing in luxury vessel operations, charter management, marine hospitality, technical support, and commercial yacht services across Indonesia.
+              PT. IMS is a premium Indonesian yacht and liveaboard management company focused on vessel operations, charter management, marine hospitality, technical support, and commercial yacht services across Indonesia. Its international team supports private owners and commercial operators with practical expertise developed over decades in Indonesian waters.
             </motion.p>
 
             <motion.p
@@ -157,7 +157,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="text-lg text-muted-foreground leading-relaxed font-light"
             >
-              With a focus on world-class service standards, operational excellence, and sustainable marine tourism, PT. IMS supports private owners, investors, and commercial charter operators throughout Komodo, Raja Ampat, Banda Sea, Ambon, and beyond.
+              With a focus on strong service standards, operational discipline, and sustainable marine tourism, PT. IMS supports private owners, investors, and charter operators across Komodo, Raja Ampat, the Banda Sea, Ambon, and Indonesia&apos;s remote cruising grounds.
             </motion.p>
 
             {/* Vision & Mission */}
@@ -177,7 +177,7 @@ export default function About() {
                   <h4 className="font-serif text-xl text-deep-navy">Our Vision</h4>
                 </div>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  To become Indonesia&apos;s leading integrated yacht and liveaboard management company delivering world-class marine hospitality and operational excellence.
+                  To become Indonesia&apos;s leading integrated yacht and liveaboard management company, delivering refined marine hospitality grounded in operational discipline and trusted crew standards.
                 </p>
               </div>
 

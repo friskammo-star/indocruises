@@ -7,12 +7,12 @@ const openings = [
   {
     title: "Yacht Captain",
     description:
-      "Command luxury yachts across Indonesian waters, ensuring safe navigation, crew leadership, and exceptional guest experiences.",
+      "Command privately managed and charter yachts across Indonesian waters, ensuring safe navigation, crew leadership, and exceptional guest experiences.",
   },
   {
     title: "Hospitality & Service Crew",
     description:
-      "Deliver world-class onboard hospitality and guest experience on luxury yachts.",
+      "Deliver refined onboard hospitality and guest service on managed yachts across Indonesia.",
   },
 ]
 

@@ -96,9 +96,10 @@ export default function Destinations() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-lg text-muted-foreground leading-relaxed font-light"
           >
-            PT. IMS operates throughout Indonesia&apos;s most extraordinary marine
-            destinations — from the legendary reefs of Raja Ampat to the remote
-            frontiers of the Banda Sea.
+            PT. IMS operates throughout Indonesia&apos;s most sought-after marine
+            destinations — from Raja Ampat to the Banda Sea — with teams
+            experienced in local regulations, permits, seasonal conditions, and
+            remote-area vessel logistics.
           </motion.p>
         </div>
 

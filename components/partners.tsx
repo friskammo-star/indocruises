@@ -18,9 +18,9 @@ const featuredPartners = [
   {
     id: "indocruises-com",
     name: "IndoCruises.com",
-    role: "Marketing & Booking Support",
+    role: "Booking & Guest Support Partner",
     description:
-      "Your gateway to seamless cruise bookings across the Indonesian archipelago. Handling all marketing, reservations, and customer support.",
+      "Our booking and guest support partner for PT. IMS managed vessels — handling reservations, marketing, and end-to-end customer care across the Indonesian archipelago.",
     logo: "/images/partner-indocruises.png",
     url: "https://www.indocruises.com/",
     icon: Globe,
@@ -86,8 +86,8 @@ export default function Partners() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-lg text-white/50 leading-relaxed font-light"
           >
-            Collaborating with industry leaders to deliver unmatched maritime
-            excellence across the Indonesian archipelago.
+            Collaborating with industry leaders to deliver dependable maritime
+            services across the Indonesian archipelago.
           </motion.p>
         </div>
 
