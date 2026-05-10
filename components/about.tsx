@@ -45,8 +45,8 @@ function Counter({ from, to }: { from: number; to: number }) {
 
 const stats = [
   { value: 20, suffix: "+", label: "Years of Excellence" },
-  { value: 50, suffix: "+", label: "Vessels Managed" },
-  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 30, suffix: "+", label: "Vessels Managed" },
+  { value: 99, suffix: "%", label: "Client Satisfaction" },
 ]
 
 const missions = [
