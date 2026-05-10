@@ -108,9 +108,19 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-[1.1] whitespace-pre-line"
+                  className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-[1.15]"
                 >
-                  {slides[current].title}
+                  {slides[current].title.split("\n").map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && (
+                        <>
+                          {" "}
+                          <br className="hidden sm:block" />
+                        </>
+                      )}
+                    </span>
+                  ))}
                 </motion.h1>
 
                 {/* Description */}
