@@ -11,18 +11,21 @@ const slides = [
     subtitle: "Welcome to Indocruises",
     title: "Trusted Vessel Management\nAcross Indonesia",
     description: "End-to-end yacht and liveaboard management for owners and operators who need reliable support across the Indonesian archipelago.",
+    objectPosition: "70% center",
   },
   {
     image: "/images/indonesian-cruise-2.png",
     subtitle: "Expertise & Integrity",
     title: "Navigating Excellence\nSince Day One",
     description: "A wealth of experience, extensive regional knowledge, and reputable contacts — all at your service.",
+    objectPosition: "70% center",
   },
   {
     image: "/images/indonesian-cruise-3.png",
     subtitle: "Your Trusted Partner",
     title: "Luxury Meets\nReliability",
     description: "Real-time assistance and unwavering commitment to the highest standards of maritime service.",
+    objectPosition: "70% center",
   },
 ]
 
@@ -49,10 +52,10 @@ export default function Hero() {
       <AnimatePresence mode="popLayout">
         <motion.div
           key={current}
-          initial={{ opacity: 0, scale: 1.15 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ opacity: { duration: 1.8 }, scale: { duration: 20, ease: "linear" } }}
+          transition={{ duration: 1.8 }}
           className="absolute inset-0"
         >
           <Image
@@ -60,15 +63,16 @@ export default function Hero() {
             alt={slides[current].title}
             fill
             className="object-cover"
+            style={{ objectPosition: slides[current].objectPosition }}
             priority
             quality={90}
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* Gradient overlays — cinematic depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/70 via-deep-navy/30 to-deep-navy/80 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/60 via-transparent to-transparent z-[1]" />
+      {/* Gradient overlays — subtle for readability without darkening the image */}
+      <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/30 via-transparent to-deep-navy/50 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/40 via-transparent to-transparent z-[1]" />
 
       {/* Subtle animated grain */}
       <div className="absolute inset-0 z-[2] noise-overlay opacity-50" />
@@ -104,7 +108,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.05] whitespace-pre-line"
+                  className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-[1.1] whitespace-pre-line"
                 >
                   {slides[current].title}
                 </motion.h1>

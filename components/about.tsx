@@ -95,12 +95,11 @@ export default function About() {
                 className="relative h-[500px] lg:h-[600px] w-full overflow-hidden"
               >
                 <Image
-                  src="/images/maintenance-refit.jpg"
+                  src="/images/about-bg.jpeg"
                   alt="Luxury yacht managed by Indocruises"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent" />
               </motion.div>
 
               {/* Gold accent line */}

@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="relative min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <About />

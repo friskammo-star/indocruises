@@ -58,12 +58,25 @@ export default function Footer() {
               Indonesia&apos;s premier provider of luxury yacht management and full-service maritime operations.
             </p>
             <div className="flex gap-3 pt-2">
-              {[Instagram, Linkedin].map((Icon, i) => (
+              {[
+                {
+                  Icon: Instagram,
+                  href: "https://www.instagram.com/indocruisesmaritimeservices/",
+                  label: "Instagram",
+                },
+                {
+                  Icon: Linkedin,
+                  href: "https://www.linkedin.com/in/ims-indocruises-maritimes-services-2467a0407/",
+                  label: "LinkedIn",
+                },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:border-gold hover:text-gold transition-all duration-300"
-                  aria-label={`Social link ${i + 1}`}
+                  aria-label={label}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
