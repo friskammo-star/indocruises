@@ -160,30 +160,32 @@ export default function WhyChooseUs() {
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.1,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="group relative bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.08] hover:-translate-y-2 overflow-hidden"
+                style={{ willChange: "opacity, transform" }}
               >
-                {/* Hover top accent */}
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-gold via-gold to-gold/50 group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                <div className="group relative bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-8 lg:p-10 transition-[background-color,transform] duration-700 hover:bg-white/[0.08] hover:-translate-y-2 overflow-hidden h-full">
+                  {/* Hover top accent */}
+                  <div className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-gold via-gold to-gold/50 group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
 
-                {/* Icon */}
-                <div className="relative h-14 w-14 flex items-center justify-center mb-6">
-                  <div className="absolute inset-0 bg-gold/10 rounded-full group-hover:bg-gold/20 transition-colors duration-500" />
-                  <reason.icon className="h-6 w-6 text-gold relative z-10 transition-transform duration-500 group-hover:scale-110" />
+                  {/* Icon */}
+                  <div className="relative h-14 w-14 flex items-center justify-center mb-6">
+                    <div className="absolute inset-0 bg-gold/10 rounded-full group-hover:bg-gold/20 transition-colors duration-500" />
+                    <reason.icon className="h-6 w-6 text-gold relative z-10 transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+
+                  <h3 className="font-serif text-lg text-white mb-3 group-hover:text-gold transition-colors duration-500">
+                    {reason.title}
+                  </h3>
+
+                  <p className="text-white/40 text-sm leading-relaxed font-light group-hover:text-white/60 transition-colors duration-500">
+                    {reason.description}
+                  </p>
                 </div>
-
-                <h3 className="font-serif text-lg text-white mb-3 group-hover:text-gold transition-colors duration-500">
-                  {reason.title}
-                </h3>
-
-                <p className="text-white/40 text-sm leading-relaxed font-light group-hover:text-white/60 transition-colors duration-500">
-                  {reason.description}
-                </p>
               </motion.div>
             ))}
           </div>
@@ -195,30 +197,32 @@ export default function WhyChooseUs() {
                 key={i + 3}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 transition={{
                   duration: 0.6,
                   delay: (i + 3) * 0.1,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="group relative bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-8 transition-all duration-700 hover:bg-white/[0.08] hover:-translate-y-2 overflow-hidden"
+                style={{ willChange: "opacity, transform" }}
               >
-                {/* Hover top accent */}
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-gold via-gold to-gold/50 group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                <div className="group relative bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] p-8 transition-[background-color,transform] duration-700 hover:bg-white/[0.08] hover:-translate-y-2 overflow-hidden h-full">
+                  {/* Hover top accent */}
+                  <div className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-gold via-gold to-gold/50 group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
 
-                {/* Icon */}
-                <div className="relative h-14 w-14 flex items-center justify-center mb-6">
-                  <div className="absolute inset-0 bg-gold/10 rounded-full group-hover:bg-gold/20 transition-colors duration-500" />
-                  <reason.icon className="h-6 w-6 text-gold relative z-10 transition-transform duration-500 group-hover:scale-110" />
+                  {/* Icon */}
+                  <div className="relative h-14 w-14 flex items-center justify-center mb-6">
+                    <div className="absolute inset-0 bg-gold/10 rounded-full group-hover:bg-gold/20 transition-colors duration-500" />
+                    <reason.icon className="h-6 w-6 text-gold relative z-10 transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+
+                  <h3 className="font-serif text-lg text-white mb-3 group-hover:text-gold transition-colors duration-500">
+                    {reason.title}
+                  </h3>
+
+                  <p className="text-white/40 text-sm leading-relaxed font-light group-hover:text-white/60 transition-colors duration-500">
+                    {reason.description}
+                  </p>
                 </div>
-
-                <h3 className="font-serif text-lg text-white mb-3 group-hover:text-gold transition-colors duration-500">
-                  {reason.title}
-                </h3>
-
-                <p className="text-white/40 text-sm leading-relaxed font-light group-hover:text-white/60 transition-colors duration-500">
-                  {reason.description}
-                </p>
               </motion.div>
             ))}
           </div>

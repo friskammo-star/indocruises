@@ -110,44 +110,46 @@ export default function Destinations() {
               key={dest.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, margin: "0px 0px -80px 0px" }}
               transition={{
                 duration: 0.6,
                 delay: i * 0.07,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative overflow-hidden bg-white border border-foam hover:border-teal/30 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(8,145,178,0.08)]"
+              style={{ willChange: "opacity, transform" }}
             >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={dest.image}
-                  alt={dest.name}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/20 to-transparent" />
+              <div className="group relative overflow-hidden bg-white border border-foam hover:border-teal/30 transition-[border-color,box-shadow] duration-500 hover:shadow-[0_8px_40px_rgba(8,145,178,0.08)] h-full">
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={dest.image}
+                    alt={dest.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/20 to-transparent" />
 
-                {/* Location pin overlay */}
-                <div className="absolute bottom-3 left-4 flex items-center gap-1.5">
-                  <MapPin className="h-3.5 w-3.5 text-gold" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/90">
-                    Indonesia
-                  </span>
+                  {/* Location pin overlay */}
+                  <div className="absolute bottom-3 left-4 flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5 text-gold" />
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/90">
+                      Indonesia
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                {/* Gold top accent */}
-                <div className="absolute top-0 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                {/* Content */}
+                <div className="p-6">
+                  {/* Gold top accent */}
+                  <div className="absolute top-0 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
 
-                <h3 className="font-serif text-lg text-deep-navy group-hover:text-teal transition-colors duration-300 mb-2">
-                  {dest.name}
-                </h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  {dest.description}
-                </p>
+                  <h3 className="font-serif text-lg text-deep-navy group-hover:text-teal transition-colors duration-300 mb-2">
+                    {dest.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                    {dest.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
