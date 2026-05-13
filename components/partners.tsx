@@ -38,12 +38,7 @@ const featuredPartners = [
 ]
 
 const logoPartners = [
-  {
-    id: "bgm",
-    name: "Bali Gapura Marina",
-    logo: "/images/bali-gapura-marina.png",
-    url: "https://baligapuramarina.com",
-  },
+  
   {
     id: "cwc",
     name: "CWC",
