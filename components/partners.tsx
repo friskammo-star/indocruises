@@ -2,9 +2,9 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Anchor, Globe, Handshake, ArrowUpRight, Ship } from "lucide-react"
+import { Globe, Handshake, ArrowUpRight, Ship, Anchor, Wrench } from "lucide-react"
 
-const featuredPartners = [
+const partners = [
   {
     id: "indocruises-com",
     name: "IndoCruises.com",
@@ -30,31 +30,28 @@ const featuredPartners = [
     name: "Dock & Deck Solutions",
     role: "Marine Engineering",
     description:
-      "Marine engineering, aluminum vessel procurement, and premium provisioning — supporting build quality and onboard standards across the managed fleet.",
+      "Marine engineering, aluminum vessel procurement, and premium provisioning.",
     logo: "/images/dnd.jpeg",
     url: "https://dockanddecksolutions.com/marine-engineering",
-    icon: Anchor,
-  },
-]
-
-const logoPartners = [
-  {
-    id: "bgm",
-    name: "Bali Gapura Marina",
-    logo: "/images/bali-gapura-marina.png",
-    url: "https://baligapuramarina.com",
+    icon: Wrench,
   },
   {
     id: "cwc",
     name: "CWC",
+    role: "",
+    description: "",
     logo: "/images/cwc.jpeg",
     url: "#",
+    icon: Handshake,
   },
   {
     id: "jms",
     name: "JMS",
+    role: "",
+    description: "",
     logo: "/images/jms.jpeg",
     url: "#",
+    icon: Handshake,
   },
 ]
 
@@ -122,9 +119,9 @@ export default function Partners() {
           </motion.p>
         </div>
 
-        {/* Featured Partner Cards — 3 equal vertical columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {featuredPartners.map((partner, i) => {
+        {/* Partner Cards — 3 columns, 2 rows */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {partners.map((partner, i) => {
             const isExternal = partner.url !== "#"
             return (
               <motion.div
@@ -134,7 +131,7 @@ export default function Partners() {
                 viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                 transition={{
                   duration: 0.6,
-                  delay: i * 0.1,
+                  delay: i * 0.08,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 style={{ willChange: "opacity, transform" }}
@@ -144,14 +141,14 @@ export default function Partners() {
                   href={partner.url}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
-                  className="group relative flex h-full flex-col bg-white/[0.04] backdrop-blur-sm border border-white/10 hover:border-gold/40 transition-[border-color,background-color,box-shadow] duration-500 hover:bg-white/[0.06] hover:shadow-[0_12px_48px_rgba(251,191,36,0.08)] overflow-hidden"
+                  className="group relative flex h-full flex-col bg-white/[0.04] border border-white/10 hover:border-gold/40 transition-[border-color] duration-500 overflow-hidden"
                 >
                   {/* Gold top accent */}
                   <div className="absolute top-0 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
 
-                  {/* Logo plate — prominent focal point */}
-                  <div className="relative h-40 bg-white/[0.06] border-b border-white/10 flex items-center justify-center p-8">
-                    <div className="relative w-full h-full max-w-[180px]">
+                  {/* Logo plate */}
+                  <div className="relative h-36 bg-white/[0.06] border-b border-white/10 flex items-center justify-center p-6">
+                    <div className="relative w-full h-full max-w-[160px]">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
@@ -162,26 +159,30 @@ export default function Partners() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col flex-1 p-8 gap-4">
-                    <div className="flex items-center gap-2">
-                      <partner.icon className="h-3.5 w-3.5 text-gold" />
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
-                        {partner.role}
-                      </span>
-                    </div>
+                  <div className="flex flex-col flex-1 p-6 gap-3">
+                    {partner.role && (
+                      <div className="flex items-center gap-2">
+                        <partner.icon className="h-3.5 w-3.5 text-gold" />
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
+                          {partner.role}
+                        </span>
+                      </div>
+                    )}
 
-                    <h3 className="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-300 leading-tight">
+                    <h3 className="font-serif text-xl text-white group-hover:text-gold transition-colors duration-300 leading-tight">
                       {partner.name}
                     </h3>
 
-                    <p className="text-sm text-white/50 font-light leading-relaxed flex-1">
-                      {partner.description}
-                    </p>
+                    {partner.description && (
+                      <p className="text-sm text-white/50 font-light leading-relaxed flex-1">
+                        {partner.description}
+                      </p>
+                    )}
 
                     {/* Link cue */}
                     {isExternal && (
-                      <div className="flex items-center gap-2 pt-4 mt-auto border-t border-white/10 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 group-hover:text-gold transition-colors duration-300">
-                        <span>Visit Partner</span>
+                      <div className="flex items-center gap-2 pt-3 mt-auto border-t border-white/10 text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 group-hover:text-gold transition-colors duration-300">
+                        <span>Visit</span>
                         <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </div>
                     )}
@@ -191,51 +192,6 @@ export default function Partners() {
             )
           })}
         </div>
-
-        {/* Logo strip — subtle secondary tier */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-20"
-        >
-          <div className="flex items-center justify-center gap-4 mb-10">
-            <span className="h-px w-12 bg-white/15" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/40">
-              Trusted Collaborators
-            </span>
-            <span className="h-px w-12 bg-white/15" />
-          </div>
-
-          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
-            {logoPartners.map((partner) => {
-              const isExternal = partner.url !== "#"
-              const LogoWrapper: any = isExternal ? "a" : "div"
-              const linkProps = isExternal
-                ? { href: partner.url, target: "_blank", rel: "noopener noreferrer" }
-                : {}
-
-              return (
-                <LogoWrapper
-                  key={partner.id}
-                  {...linkProps}
-                  className="group relative flex items-center justify-center h-28 bg-white/[0.06] border border-white/10 hover:border-gold/30 hover:bg-white/[0.1] transition-[border-color,background-color] duration-500 p-6"
-                  aria-label={partner.name}
-                >
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      fill
-                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                    />
-                  </div>
-                </LogoWrapper>
-              )
-            })}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
