@@ -13,6 +13,7 @@ next.user-config.*
 .opencode/
 .vscode/
 tsconfig.tsbuildinfo
+.worktrees/
 # Common ignores
 node_modules
 .next/
