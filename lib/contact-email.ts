@@ -18,6 +18,7 @@ export type ContactEmailPayload = {
 export const CONTACT_EMAIL_TO = "info@indocruises.co.id"
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const CONTACT_FIELDS = ["name", "email", "subject", "message"] as const
 const HTML_ESCAPE: Record<string, string> = {
   "&": "&amp;",
   "<": "&lt;",
@@ -26,8 +27,13 @@ const HTML_ESCAPE: Record<string, string> = {
   "'": "&#39;",
 }
 
-function hasStringField(value: unknown, field: keyof ContactFormInput): value is Record<keyof ContactFormInput, string> {
-  return typeof value === "object" && value !== null && typeof (value as Record<string, unknown>)[field] === "string"
+function isContactFormRecord(value: unknown): value is Record<keyof ContactFormInput, string> {
+  if (typeof value !== "object" || value === null) {
+    return false
+  }
+
+  const record = value as Record<string, unknown>
+  return CONTACT_FIELDS.every((field) => typeof record[field] === "string")
 }
 
 function escapeHtml(value: string): string {
@@ -35,7 +41,7 @@ function escapeHtml(value: string): string {
 }
 
 export function parseContactFormInput(value: unknown): ContactFormInput | null {
-  if (!["name", "email", "subject", "message"].every((field) => hasStringField(value, field as keyof ContactFormInput))) {
+  if (!isContactFormRecord(value)) {
     return null
   }
 
