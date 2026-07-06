@@ -2,12 +2,17 @@ import { Resend } from "resend"
 
 import { handleContactRequest } from "@/lib/contact-handler"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: Request) {
   return handleContactRequest(
     request,
     async (payload) => {
+      const apiKey = process.env.RESEND_API_KEY?.trim()
+
+      if (!apiKey) {
+        throw new Error("Contact email sender unavailable")
+      }
+
+      const resend = new Resend(apiKey)
       const { data, error } = await resend.emails.send(payload)
 
       if (error) {
