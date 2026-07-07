@@ -1,12 +1,17 @@
 import Link from "next/link"
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
-  { name: "Careers", href: "/#careers" },
-  { name: "Contact", href: "/#contact" },
+const socialLinks = [
+  {
+    Icon: Instagram,
+    href: "https://www.instagram.com/indocruisesmaritimeservices/",
+    label: "Instagram",
+  },
+  {
+    Icon: Linkedin,
+    href: "https://www.linkedin.com/in/ims-indocruises-maritimes-services-2467a0407/",
+    label: "LinkedIn",
+  },
 ]
 
 export default function Footer() {
@@ -39,66 +44,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 pt-32 pb-12 mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 pb-16 border-b border-white/5">
-
-          {/* Brand */}
-          <div className="space-y-6">
-            <Link href="/" className="flex flex-col gap-0 w-[240px]">
-              <div className="flex justify-between w-full font-serif text-[28px] font-semibold text-white leading-none">
-                {"INDOCRUISES".split("").map((c, i) => <span key={i}>{c}</span>)}
-              </div>
-              <div className="flex justify-between w-full text-[10px] text-white/70 uppercase font-light mt-[5px]">
-                {"MARITIME".split("").map((c, i) => <span key={`m-${i}`}>{c}</span>)}
-                <span className="w-2"></span>
-                {"SERVICES".split("").map((c, i) => <span key={`s-${i}`}>{c}</span>)}
-              </div>
-            </Link>
-            <p className="text-white/40 text-sm font-light leading-relaxed max-w-xs">
-              Indonesia&apos;s premier provider of luxury yacht management and full-service maritime operations.
-            </p>
-            <div className="flex gap-3 pt-2">
-              {[
-                {
-                  Icon: Instagram,
-                  href: "https://www.instagram.com/indocruisesmaritimeservices/",
-                  label: "Instagram",
-                },
-                {
-                  Icon: Linkedin,
-                  href: "https://www.linkedin.com/in/ims-indocruises-maritimes-services-2467a0407/",
-                  label: "LinkedIn",
-                },
-              ].map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:border-gold hover:text-gold transition-all duration-300"
-                  aria-label={label}
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gold mb-8">Navigation</h4>
-            <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-sm text-white/40 hover:text-white transition-colors font-light"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
+        <div className="pb-16 border-b border-white/5">
           {/* Contact */}
           <div>
             <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gold mb-8">Contact</h4>
@@ -117,6 +63,20 @@ export default function Footer() {
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold" aria-hidden="true" />
                 <a href="https://wa.me/628113988988" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">0811-3988-988</a>
               </p>
+              <div className="flex gap-3 pt-3">
+                {socialLinks.map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:border-gold hover:text-gold transition-all duration-300"
+                    aria-label={label}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 
 import { type FormEvent, useState } from "react"
 import { motion } from "framer-motion"
-import { Send, Anchor } from "lucide-react"
+import { Send } from "lucide-react"
 
 const initialForm = { name: "", email: "", subject: "", message: "" }
 
@@ -45,57 +45,14 @@ export default function Contact() {
     }
   }
   return (
-    <section id="contact" className="relative py-32 lg:py-40 bg-pearl overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-teal/5 rounded-full blur-[100px] pointer-events-none" />
-
+    <section id="contact" className="relative py-24 lg:py-32 bg-pearl overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center justify-center gap-4 mb-6"
-          >
-            <Anchor className="h-4 w-4 text-gold" />
-            <span className="text-[12px] font-semibold uppercase tracking-[0.3em] text-teal">Contact Us</span>
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif text-4xl sm:text-5xl text-deep-navy leading-tight"
-          >
-            Ready to Set <span className="italic text-teal">Sail?</span>
-          </motion.h2>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-2 space-y-10"
-          >
-            <p className="text-muted-foreground text-lg font-light leading-relaxed">
-              Whether you need full vessel management or specialized support, our team is ready to discuss bespoke solutions.
-            </p>
-
-          </motion.div>
-
-          {/* Contact Form */}
+        <div className="mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-3"
+            transition={{ duration: 0.7 }}
           >
             <form className="bg-white shadow-xl shadow-deep-navy/5 p-10 lg:p-14 space-y-8" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
